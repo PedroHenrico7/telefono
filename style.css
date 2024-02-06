@@ -56,3 +56,31 @@ iframe#topper{
     height: 476px;
 
 }
+
+
+section.barra {
+
+    text-align: right;
+}
+
+section.barra  img{
+
+    width: 50px;
+    margin: 10px;
+    border-radius: 50%;
+    box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.247);
+    box-sizing: border-box;
+
+    
+
+}
+
+section.barra img:hover {
+
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.348);
+    border: 2px solid white;
+    transform: translate( -2px -2px);
+    transition: transform .2s;
+
+
+}
