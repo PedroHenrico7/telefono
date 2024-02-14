@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    
+    
+        <form action="cadastro.php" method="POST" autocomplete="off">
+            <fieldset>
+                <legend> Dados </legend>
+                <p><label for="iNome">Nome:</label>
+                    <input type="text" name="texto" id="iNome" required></p>
+                <p><label for="iSobrenome">Sobrenome: </label>
+                    <input type="text" name="text" id="iSobrenome" required></p>
+                <p><input type="submit" value="Enviar"></p>
+                
+                <p><label for="iusu">Usuario:</label>
+                    <input type="text" name="usu" id="iusu" required minlength="8" size="10"></p>
+                <p><label for="isenha">Senha: </label>
+                    <input type="password" name="senha" id="isenha" required minlength="7" placeholder="sua senha"></p>
+                <p><label for="imedia">Media: </label>
+                        <input type="number" name="media" id="media" required minlength="7" step="0,5" ></p>
+                <p><label for="idata">Media: </label>
+                        <input type="date" name="data" id="idata" ></p>
+
+                <p> <label for="itel">Telefone: </label> <input type="tel" name="tel" id="itel" required placeholder="(xx)xxxxxxxxx" pattern="^\(d{2}\)\d{4,5}-\d{4}$"></p>
+
+
+
+
+
+                <p><input type="submit" value="Enviar"></p>
+                <p><input type="reset" value="Limpar"></p>
+            </fieldset>
+            <fieldset>
+                <legend> esporte favorito seu</legend>
+
+            <input type="checkbox" name="spf" id="ifut"> <label for="ifut">futebola</label>
+            <input type="checkbox" name="spv" id="ivol"> <label for="ivol">volei</label>
+            <input type="checkbox" name="spb" id="ibas"> <label for="ibas">basquete </label>
+            <input type="checkbox" name="spn" id="inat"> <label for="inat">natação</label>
+            </fieldset>
+
+            <fieldset>
+                <legend> sexo</legend>
+
+                <input type="radio" name="sexo" id="ifem"> <label for="ifut">feminino</label>
+                <input type="radio" name="sexo" id="imas"> <label for="ivol">masculino</label>
+                
+                <p>Cor: <input type="color" name="coloru" id="icolor" value="#00ff00"><label for="icolor" ></label></p>
+
+                <p><label for="isat">Satisfação: <input type="range" name="tot" id="isat" min="1" max="10"></label></p>
+
+                <p><label for="iarq">foto do corte:  <input type="file" name="tot" id="iarq"></label></p>
+
+                ( input file então usat POST de method)
+        
+            </fieldset>
+
+            <fieldset>
+                    <legend>Estado</legend>
+
+                <p><label for="iest">Em que estado voce mora? <select type="est" name="iest" id="iest" ></label></p>
+
+                        <optgroup label="Sudeste">
+                            <option value="RJ">Rio de Janneiro</option>
+                            <option value="SP">São Paulo</option>
+                            <option value="MG">Minas Gerais</option>
+                        </optgroup>
+                        
+                        <optgroup label="Nordeste">
+                            <option value="BA">Bahia</option>
+                            <option value="MA">Maranhão</option>
+                            <option value="PE">Pernambuco</option><br>
+                        </optgroup> 
+                    </select>
+                    </fieldset> 
+
+                    <fieldset>
+                            <legend>recursos </legend>
+                            <p><label for="iprof">Qual sua Profissão ? <input type="text" name="prof" id="iprof" list="piroca" ></label></p>
+                            <datalist id="piroca">
+
+                            <option>MED</option>
+                            <option>ENG</option>
+                            <option>ADM</option>
+
+
+
+                            </datalist>
+
+                            <p><label for="imsg">Mensagem:</label></p>
+                                <textarea name="msg" id="imsg" cols="30" rows="10"></textarea>
+
+                                
+                    </fieldset>
+
+                    
+                    <fieldset>
+                                <legend>somatorio</legend>
+                            <form action="caddastro.php" method="get">
+
+                                <p><label for="in1">Numero 1:</label></p>
+                                    <input type="number" name="n1" id="in1" min="0" max="100" oninput="isoma.innerHTML = Number(in1.value) + Number (in2.value)">
+
+                                    <p><label for="in2">Numero 2:</label></p>
+                                    <input type="number" name="n2" id="in2" min="0" max="100" oninput="isoma.innerHTML = Number(in1.value) + Number (in2.value)">
+
+
+
+
+                                <p> <label for="isoma">Soma:</label></p> 
+                                    <output id="isoma" name="soma">0</output>
+
+
+                            </form>
+       
+                    </fieldset>
+
+                    <fieldset>
+
+                            <p><label for="iano">Em que ano voce nasceu?</label> <input type="number" name="ano" id="iano" min="1945" max="2024" oninput="calcidade()"></p>
+
+                            <P><label for="idade">Sua idade é:</label></P>
+                                <output id="idade">0</output>
+
+
+
+                    </fieldset>
+</form>
+
+<script>
+
+    function calcidade(){
+
+        let atual = new Date().getFullYear()
+
+        idade.innerHTML = Number(atual) - Number(iano.value)
+
+
+    }
+
+</script>
+        
+    
+</body>
+</html>
